@@ -26,7 +26,7 @@ Make sure you're using TeXstudio version `4.5.2rc1` or higher. To check your ver
 
 If you need to update, download the latest version from the [TeXstudio release page](https://github.com/texstudio-org/texstudio/releases)
 
-Download the AppImage, make it executable, and run it
+For Linux users, download the AppImage, make it executable, and run it
 </details>
 
 <details>
@@ -39,7 +39,8 @@ Install the `openai` library by running `pip install openai`.
 
 <details>
   <summary> <b>3. Obtain an OpenAI API key</b> </summary>
-Create an account at [openai.com](chat.openai.com/auth/login) and get your API key from the [OpenAI API Keys page](https://platform.openai.com/account/api-keys).
+
+Create an account at [openai.com](https://chat.openai.com/auth/login) and get your API key from the [OpenAI API Keys page](https://platform.openai.com/account/api-keys).
 </details>
 
 
