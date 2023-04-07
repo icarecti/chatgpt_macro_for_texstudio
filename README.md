@@ -3,7 +3,8 @@
 Enhance your TeXstudio experience with the power of AI! This macro leverages OpenAI's technology to provide intelligent suggestions and improvements to your LaTeX documents. 
 Watch this video to see it in action:
 
-< awseome video >
+https://user-images.githubusercontent.com/79723245/230682343-96f56329-1ad7-4c60-bae3-f6a15741df59.mp4
+
 
 # How does it work
 ___
