@@ -1,5 +1,4 @@
 # ChatGPT for TeXstudio
-___
 
 Enhance your TeXstudio experience with the power of AI! These macros leverage OpenAI's technology to provide intelligent suggestions and improvements to your LaTeX documents. 
 Watch this video to see it in action:
@@ -8,7 +7,6 @@ https://user-images.githubusercontent.com/79723245/230682343-96f56329-1ad7-4c60-
 
 
 # How does it work
-___
 
 The ChatGPT Macro for TeXstudio is a user-friendly integration that connects TeXstudio with OpenAI's API.
 The first macro  `ChatGPT` allows you to send selected text from your document to a Python script, which interacts with the API and processes the response. 
@@ -16,7 +14,6 @@ The response text is  inserted directly into your editor, creating an intuitive 
 The secondary macro, `ChatGPT-PromptLibrary`, offers a collection of predefined prompts accessible through a dropdown menu, allowing you to easily apply them to any selected text.
 
 # Getting Started
-___
 
 Follow these simple steps to set up the ChatGPT Macro for TeXstudio:
 
@@ -70,7 +67,6 @@ Create an account at [openai.com](https://chat.openai.com/auth/login) and get yo
 Now you're all set! Highlight any text in your document and run the macros using the shortcuts Shift+F1 and Shift+F2 or by clicking on it. Watch as the power of AI enhances your LaTeX documents!
 
 # Advanced
-___
 
 ## Add your own prompt to the prompt library
 Adding your own prompt is as easy as just adding one line to the macro script:
