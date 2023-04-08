@@ -1,8 +1,6 @@
 {
     "abbrev": "",
     "description": [
-        "Enhance your TeXstudio experience with the power of AI! This macro leverages OpenAI's technology to provide intelligent suggestions and improvements to your LaTeX documents.",
-        "",
         "Highlight any text in your document and run the macro using the shortcut Shift+F1 or by clicking on it. Watch as the power of AI enhances your LaTeX documents!"
     ],
     "formatVersion": 1,
