@@ -46,13 +46,13 @@ Create an account at [openai.com](https://chat.openai.com/auth/login) and get yo
 
 
 ### Step 1: Set up the Python script
-- Download the `my_awesome_script.py`  file.
+- Download the `openai_python_script.py` file.
 - Make it executable.
 - Open the script and insert your OpenAI API key.
 - Note the absolute filepath of the script.
 
 ### Step 2: Import the macro into TeXstudio
-- Download the macro file `my_awesome_macro`. 
+- Download the macro file `ChatGPT.txsMacro`. 
 - Import it into TeXstudio.
 - Edit the macro:
   - Update the filepath of the Python script with the one you noted in Step 1.
