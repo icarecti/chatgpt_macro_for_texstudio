@@ -91,3 +91,8 @@ Within the Python script, you have the ability to modify various parameters to f
 - [ ] use any selected text as input (even special charakters)
 - [ ] include feedback about used token / used money
 - [ ] parse errors and finish reason
+
+# Contribute
+You have some ideas on how to improve the macros or tips on how to make them run on different systems? Don't hesitate
+- create an [issue](https://github.com/icarecti/chatgpt_macro_for_texstudio/issues) 
+- open a pull request
