@@ -1,6 +1,6 @@
 # ChatGPT for TeXstudio
 
-Enhance your TeXstudio experience with the power of AI! This macro leverages OpenAI's technology to provide intelligent suggestions and improvements to your LaTeX documents. 
+Enhance your TeXstudio experience with the power of AI! These macros leverage OpenAI's technology to provide intelligent suggestions and improvements to your LaTeX documents. 
 Watch this video to see it in action:
 
 https://user-images.githubusercontent.com/79723245/230682343-96f56329-1ad7-4c60-bae3-f6a15741df59.mp4
@@ -9,9 +9,12 @@ https://user-images.githubusercontent.com/79723245/230682343-96f56329-1ad7-4c60-
 # How does it work
 ___
 
-The ChatGPT Macro for TeXstudio is a user-friendly integration that connects TeXstudio with OpenAI's API. 
-The macro sends selected text from your document to a Python script, which communicates with the API and processes the response. 
-The enhanced text is then written back to your editor.
+The ChatGPT Macro for TeXstudio is a user-friendly integration that connects TeXstudio with OpenAI's API.
+The first macro  `ChatGPT` allows you to send selected text from your document to a Python script, which interacts with the API and processes the response. 
+The response text is  inserted directly into your editor, creating an intuitive and interactive ChatGPT experience.
+The secondary macro, `ChatGPT-PromptLibrary`, offers a collection of predefined prompts accessible through a dropdown menu, allowing you to easily apply them to any selected text.
+
+
 
 # Getting Started
 ___
@@ -64,5 +67,5 @@ Create an account at [openai.com](https://chat.openai.com/auth/login) and get yo
 
 ### Step 3: Enjoy the ChatGPT Macro
 
-Now you're all set! Highlight any text in your document and run the macro using the shortcut Shift+F1 or by clicking on it. Watch as the power of AI enhances your LaTeX documents!
+Now you're all set! Highlight any text in your document and run the macros using the shortcuts Shift+F1 and Shift+F2 or by clicking on it. Watch as the power of AI enhances your LaTeX documents!
 
