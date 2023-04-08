@@ -54,10 +54,10 @@ Create an account at [openai.com](https://chat.openai.com/auth/login) and get yo
 - Note the absolute filepath of the script.
 
 ### Step 2: Import the macro into TeXstudio
-- Download the macro [ChatGPT.txsMacro](/ChatGPT.txsMacro).
+- Download both macros [ChatGPT.txsMacro](/ChatGPT.txsMacro) and [ChatGPT-PromptLibrary.txsMacro](/ChatGPT-PromptLibrary.txsMacro).
   - by clicking on `raw` -> Save as... (Ctrl + S)
 - Import it into TeXstudio.
-  -  Macros -> Edit Macros -> Import
+  -  Macros -> Edit Macros... -> Import
 - Edit the macro:
   - Update the filepath of the Python script with the one you noted in Step 1.
   - Verify that the Python path is correct (it should match the output of `which python3` in the terminal).
