@@ -1,4 +1,5 @@
 # ChatGPT for TeXstudio
+___
 
 Enhance your TeXstudio experience with the power of AI! These macros leverage OpenAI's technology to provide intelligent suggestions and improvements to your LaTeX documents. 
 Watch this video to see it in action:
@@ -13,8 +14,6 @@ The ChatGPT Macro for TeXstudio is a user-friendly integration that connects TeX
 The first macro  `ChatGPT` allows you to send selected text from your document to a Python script, which interacts with the API and processes the response. 
 The response text is  inserted directly into your editor, creating an intuitive and interactive ChatGPT experience.
 The secondary macro, `ChatGPT-PromptLibrary`, offers a collection of predefined prompts accessible through a dropdown menu, allowing you to easily apply them to any selected text.
-
-
 
 # Getting Started
 ___
@@ -62,6 +61,7 @@ Create an account at [openai.com](https://chat.openai.com/auth/login) and get yo
 - Import it into TeXstudio.
   -  Macros -> Edit Macros... -> Import
 - Edit the macro:
+  - Macros -> Edit Macros... 
   - Update the filepath of the Python script with the one you noted in Step 1.
   - Verify that the Python path is correct (it should match the output of `which python3` in the terminal).
 
@@ -69,3 +69,19 @@ Create an account at [openai.com](https://chat.openai.com/auth/login) and get yo
 
 Now you're all set! Highlight any text in your document and run the macros using the shortcuts Shift+F1 and Shift+F2 or by clicking on it. Watch as the power of AI enhances your LaTeX documents!
 
+# Advanced
+___
+
+## Add your own prompt to the prompt library
+Adding your own prompt is as easy as just adding one line to the macro script:
+
+`{ promptOption: "text that will be displayed in the dropdown", basePrompt: "command that will be sent to ChatGPT" }`
+  
+## Change the parameters in the python script
+
+Within the Python script, you have the ability to modify various parameters to fine-tune the generated response:
+
+- **system message**: The system message determines the behavior of the assistant. By default, ChatGPT uses *"You are a helpful assistant."* for this macro, it has been modified to *"You are a helpful assistant and an expert LaTeX editor. You only return valid LaTeX. Everything you return is directly inserted into a LaTeX document and interpreted as LaTeX code."*
+- **model**: The model is set to `gpt-3.5-turbo`. If you have access to GPT4 you can switch it to `gpt-4`.
+- **max_tokens**: This parameter sets the maximum length of the response. The total token limit for a single request with `gpt-3.5-turbo` is 4000 (approximately 6 pages of text), including the input. If your input consists of 3000 tokens, the response can only be 1000 tokens long. By default, this is set to 3000, meaning your maximum input can be 1000 tokens (roughly 1.5 pages of text).
+- **temperature**: [see official documentation](https://platform.openai.com/docs/api-reference/chat/create#chat/create-temperature)
