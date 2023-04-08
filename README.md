@@ -15,6 +15,8 @@ The secondary macro, `ChatGPT-PromptLibrary`, offers a collection of predefined 
 
 # Getting Started
 
+*Note: this macro was developed and tested on Ubuntu 22.04 but should also run on Windows and Mac.*
+
 Follow these simple steps to set up the ChatGPT Macro for TeXstudio:
 
 ### Prerequisites
@@ -81,3 +83,11 @@ Within the Python script, you have the ability to modify various parameters to f
 - **model**: The model is set to `gpt-3.5-turbo`. If you have access to GPT4 you can switch it to `gpt-4`.
 - **max_tokens**: This parameter sets the maximum length of the response. The total token limit for a single request with `gpt-3.5-turbo` is 4000 (approximately 6 pages of text), including the input. If your input consists of 3000 tokens, the response can only be 1000 tokens long. By default, this is set to 3000, meaning your maximum input can be 1000 tokens (roughly 1.5 pages of text).
 - **temperature**: [see official documentation](https://platform.openai.com/docs/api-reference/chat/create#chat/create-temperature)
+
+
+# Roadmap
+
+- [ ] improve prompts in the prompt library
+- [ ] use any selected text as input (even special charakters)
+- [ ] include feedback about used token / used money
+- [ ] parse errors and finish reason
