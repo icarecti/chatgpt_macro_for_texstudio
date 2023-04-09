@@ -42,13 +42,13 @@ Install the `openai` Python library. Open a terminal and run `pip install openai
 <details>
   <summary> <b>3. Obtain an OpenAI API key</b> </summary>
 
-Create an account at [openai.com](https://chat.openai.com/auth/login) and get your API key from the [OpenAI API Keys page](https://platform.openai.com/account/api-keys).
+Create an account at [openai.com](https://chat.openai.com/auth/login) and get your API key from the [OpenAI API Keys page](https://platform.openai.com/account/api-keys). It will be only shown once, so save it somewhere for the next step.
 </details>
 
 
 ### Step 1: Set up the Python script
  
-- Download the [openai_python_script](/openai_python_script).
+- Download the [openai_python_script](/openai_python_script.py).
   - by clicking on `raw` -> Save as... (Ctrl + S)
 - Make it executable.
 - Open the script and insert your OpenAI API key.
