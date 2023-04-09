@@ -100,15 +100,15 @@ You have some ideas on how to improve the macros or tips on how to make them run
 
 # 📚 FAQ
 
-## ❓ The response of ChatGPT has no empty spaces. Why is that?
+### ❓ The response of ChatGPT has no empty spaces. Why is that?
 
 **A:** If your TeXstudio version is older than `4.5.2rc1`, then empty spaces are removed by TeXstudio while reading the response. This issue was resolved with version `4.5.2rc1`.
 
-## ❓ Why is it so slow in generating text?
+### ❓ Why is it so slow in generating text?
 
 **A:** When you create an account at OpenAI, you receive an $18 credit that expires after a few months. Using only this free credit results in slower response times. Adding a payment option to your OpenAI account significantly improves the response time, as demonstrated in the introduction video above.
 
-## ❓ How can I add my own prompt to the prompt-library?
+### ❓ How can I add my own prompt to the prompt-library?
 
 **A:** Adding your own prompt is a breeze! Just follow these simple steps:
 
@@ -118,7 +118,7 @@ You have some ideas on how to improve the macros or tips on how to make them run
 
 ``` { promptOption: "text that will be displayed in the dropdown", basePrompt: "command that will be sent to ChatGPT" } ```
 
-## ❓ How expensive is it to use this macro?
+### ❓ How expensive is it to use this macro?
 
 **A:** The macro itself is completely free! However, OpenAI does charge a small fee for each request made to their API. The costs are quite minimal, so you can easily generate a large amount of content without breaking the bank.
 
