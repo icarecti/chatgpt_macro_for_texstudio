@@ -28,7 +28,7 @@ Make sure you're using TeXstudio version `4.5.2rc1` or higher. To check your ver
 
 If you need to update, download the latest version from the [TeXstudio release page](https://github.com/texstudio-org/texstudio/releases).
 
-For Linux users, download the `*AppImage`, make it executable, and run it.
+For Linux users, download the `*AppImage`, make it executable (`chmod +x filename`), and run it.
 </details>
 
 <details>
