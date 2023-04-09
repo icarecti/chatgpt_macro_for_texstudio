@@ -5,7 +5,7 @@ Watch this video to see it in action:
 
 https://user-images.githubusercontent.com/79723245/230745138-730ee0de-c1d1-4b48-8b08-7d099e9dd52f.mp4
 
-# How does it work
+# 🧠 How does it work
 
 
 The ChatGPT Macro for TeXstudio is a user-friendly integration that connects TeXstudio with OpenAI's API.
@@ -13,7 +13,7 @@ The first macro  `ChatGPT` allows you to send selected text from your document t
 The response text is  inserted directly into your editor, creating an intuitive and interactive ChatGPT experience.
 The secondary macro, `ChatGPT-PromptLibrary`, offers a collection of predefined prompts accessible through a dropdown menu, allowing you to easily apply them to any selected text.
 
-# Getting Started
+# 🚀 Getting Started
 
 *Note: this macro was developed and tested on Ubuntu 22.04 but should also run on Windows and Mac.*
 
@@ -68,7 +68,7 @@ Create an account at [openai.com](https://chat.openai.com/auth/login) and get yo
 
 Now you're all set! Highlight any text in your document and run the macros using the shortcuts Shift+F1 and Shift+F2 or by clicking on it. The first time you execute the macros they ask you `Do you trust this script?` if you click `Yes, allow all calls it will ever make` this message will not be shown to you again.
 
-# Advanced
+# ⚙️ Advanced
   
 ### Change the parameters in the python script
 
@@ -80,14 +80,14 @@ Within the Python script, you have the ability to modify various parameters to f
 - **temperature**: [see official documentation](https://platform.openai.com/docs/api-reference/chat/create#chat/create-temperature)
 
 
-# Roadmap
+# 📍 Roadmap
 
 - [ ] improve prompts in the prompt library
 - [ ] use any selected text as input (even special charakters)
 - [ ] include feedback about used token / used money
 - [ ] parse errors and finish reason
 
-# Contribute
+# 💪 Contribute
 You have some ideas on how to improve the macros or tips on how to make them run on different systems? Don't hesitate
 - create an [issue](https://github.com/icarecti/chatgpt_macro_for_texstudio/issues) 
 - open a pull request
