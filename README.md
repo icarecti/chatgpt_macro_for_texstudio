@@ -36,7 +36,7 @@ For Linux users, download the `*AppImage`, make it executable, and run it.
 
 Install Python from the [official website](https://realpython.com/installing-python/).
 
-Install the `openai` library by running `pip install openai`.
+Install the `openai` Python library. Open a terminal and run `pip install openai`.
 </details>
 
 <details>
