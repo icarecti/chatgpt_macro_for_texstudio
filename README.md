@@ -1,4 +1,4 @@
-# ChatGPT for TeXstudio
+# 🤖 ChatGPT for TeXstudio
 
 Enhance your TeXstudio experience with the power of AI! These macros leverage OpenAI's technology to provide intelligent suggestions and improvements to your LaTeX documents. 
 Watch this video to see it in action:
