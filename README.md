@@ -98,24 +98,32 @@ You have some ideas on how to improve the macros or tips on how to make them run
 - open a pull request
 
 
-# FAQ
+# 📚 FAQ
 
-## The response of ChatGPT has no empty spaces. Why is that?
-If your TeXstudio version is older than `4.5.2rc1` then empty spaces are removed by TeXstudio while reading the response. This was fixed with the version `4.5.2rc1`.
+## ❓ The response of ChatGPT has no empty spaces. Why is that?
 
-## Why is it so slow in generating text?
-After creating an account at openAI you get 18$ credit that expires after some month. Using only this free credit gives you much slower response time. After you add a payment option to your openAI account the response time improves a lot (like seen in the introduction vidoe above).
+**A:** If your TeXstudio version is older than `4.5.2rc1`, then empty spaces are removed by TeXstudio while reading the response. This issue was resolved with version `4.5.2rc1`.
 
-## How can I add my own prompt to the prompt-library?
-Adding your own prompt is as easy as just adding one line to the macro script:
-- Macros -> Edit Macros... -> click on `ChatGPT-PromptLibrary. ` -> add a line like this:
-- `{ promptOption: "text that will be displayed in the dropdown", basePrompt: "command that will be sent to ChatGPT" }`
+## ❓ Why is it so slow in generating text?
 
-## How expensive is it to use this macro?
-Don't worry, the macro itself is completely free! However, OpenAI does charge a small fee for each request made to their API. The costs are quite minimal, so you can easily generate a large amount of content without breaking the bank.
+**A:** When you create an account at OpenAI, you receive an $18 credit that expires after a few months. Using only this free credit results in slower response times. Adding a payment option to your OpenAI account significantly improves the response time, as demonstrated in the introduction video above.
+
+## ❓ How can I add my own prompt to the prompt-library?
+
+**A:** Adding your own prompt is a breeze! Just follow these simple steps:
+
+1. Navigate to `Macros > Edit Macros...`
+2. Click on `ChatGPT-PromptLibrary.`
+3. Add a line in the following format:
+
+``` { promptOption: "text that will be displayed in the dropdown", basePrompt: "command that will be sent to ChatGPT" } ```
+
+## ❓ How expensive is it to use this macro?
+
+**A:** The macro itself is completely free! However, OpenAI does charge a small fee for each request made to their API. The costs are quite minimal, so you can easily generate a large amount of content without breaking the bank.
 
 To give you an idea, the current pricing for the `gpt-3.5-turbo` model is $0.002 per 1,000 tokens. You can check the most up-to-date pricing information on the [OpenAI Pricing page](https://openai.com/pricing).
 
-**Examples of Costs**
+**💡 Examples of Costs**
 - Generate the entire Harry Potter book series (7 books, 2,200 pages) for just $3.
 - Create 100 pages of text (including input) for a mere 10 cents.
