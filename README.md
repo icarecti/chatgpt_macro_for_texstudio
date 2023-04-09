@@ -69,13 +69,8 @@ Create an account at [openai.com](https://chat.openai.com/auth/login) and get yo
 Now you're all set! Highlight any text in your document and run the macros using the shortcuts Shift+F1 and Shift+F2 or by clicking on it. The first time you execute the macros they ask you `Do you trust this script?` if you click `Yes, allow all calls it will ever make` this message will not be shown to you again.
 
 # Advanced
-
-## Add your own prompt to the prompt library
-Adding your own prompt is as easy as just adding one line to the macro script:
-
-`{ promptOption: "text that will be displayed in the dropdown", basePrompt: "command that will be sent to ChatGPT" }`
   
-## Change the parameters in the python script
+### Change the parameters in the python script
 
 Within the Python script, you have the ability to modify various parameters to fine-tune the generated response:
 
