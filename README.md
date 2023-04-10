@@ -57,6 +57,7 @@ Create an account at [openai.com](https://chat.openai.com/auth/login) and get yo
 ### Step 2: Import the macro into TeXstudio
 - Download both macros [ChatGPT.txsMacro](/ChatGPT.txsMacro) and [ChatGPT-PromptLibrary.txsMacro](/ChatGPT-PromptLibrary.txsMacro).
   - by clicking on `raw` -> Save as... (Ctrl + S)
+  - save both files as `ChatGPT.txsMacro` and `ChatGPT-PromptLibrary.txsMacro` (don't add a file ending like .txt)
 - Import it into TeXstudio.
   -  Macros -> Edit Macros... -> Import
 - Edit both macro:
