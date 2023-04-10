@@ -18,7 +18,7 @@
         "",
         "// #########################################################################",
         "// This is the prompt library. The promptOption is the display text in the ",
-        "// dropdown and the basePrompt is the comand sent to ChatGPT.",
+        "// dropdown and the basePrompt is the command sent to ChatGPT.",
         "// Just add a new line or change an existing one and the next time you call",
         "// this macro your new prompt will be available to you.",
         "// #########################################################################",
