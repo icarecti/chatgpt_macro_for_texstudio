@@ -83,6 +83,8 @@ Within the Python script, you have the ability to modify various parameters to f
 
 # 📍 Roadmap
 
+- [ ] add the functionality to abort a running call
+- [ ] make the max_tokens dynamicall, depending of the length of the input
 - [ ] improve prompts in the prompt library
 - [ ] use any selected text as input (even special charakters)
 - [ ] include feedback about used token / used money
