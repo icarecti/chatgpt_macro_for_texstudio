@@ -74,6 +74,10 @@ Now you're all set! Highlight any text in your document and run the macros using
 ### Stop a Running Script
 If you have executed the macro and you want to stop it (because the response is to long or not what you expected) then just click on `Macro` -> `Stop ChatGPT` or `Stop ChatGPT PromptLib`. These two menu options are dynamically generated when the Macros are executed and not visible if the Macros where never executed.
 
+Screenshot of the menu:
+
+<img src="https://user-images.githubusercontent.com/79723245/235262063-53c46478-6d01-4c7b-b885-0df57307ac8d.png" width="300"/>
+
 
 ### Change the parameters in the python script
 
