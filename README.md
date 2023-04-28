@@ -108,7 +108,7 @@ You have some ideas on how to improve the macros or tips on how to make them run
 
 ### ❓ Why is it so slow in generating text?
 
-**A:** When you create an account at OpenAI, you receive an $18 credit that expires after a few months. Using only this free credit results in slower response times. Adding a payment option to your OpenAI account significantly improves the response time, as demonstrated in the introduction video above.
+**A:** When you create an account at OpenAI, you receive a free credit that expires after a few months. Using only this free credit results in slower response times. Adding a payment option to your OpenAI account significantly improves the response time, as demonstrated in the introduction video above.
 
 ### ❓ How can I add my own prompt to the prompt-library?
 
