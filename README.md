@@ -70,23 +70,27 @@ Create an account at [openai.com](https://chat.openai.com/auth/login) and get yo
 Now you're all set! Highlight any text in your document and run the macros using the shortcuts Shift+F1 and Shift+F2 or by clicking on it. The first time you execute the macros they ask you `Do you trust this script?` if you click `Yes, allow all calls it will ever make` this message will not be shown to you again.
 
 # ⚙️ Advanced
-  
+
+### Stop a Running Script
+If you have executed the macro and you want to stop it (because the response is to long or not what you expected) then just click on `Macro` -> `Stop ChatGPT` or `Stop ChatGPT PromptLib`. These two menu options are dynamically generated when the Macros are executed and not visible if the Macros where never executed.
+
+
 ### Change the parameters in the python script
 
 Within the Python script, you have the ability to modify various parameters to fine-tune the generated response:
 
 - **system message**: The system message determines the behavior of the assistant. By default, ChatGPT uses *"You are a helpful assistant."* for this macro, it has been modified to *"You are a helpful assistant and an expert LaTeX editor. You only return valid LaTeX. Everything you return is directly inserted into a LaTeX document and interpreted as LaTeX code."*
 - **model**: The model is set to `gpt-3.5-turbo`. If you have access to GPT4 you can switch it to `gpt-4`.
-- **max_tokens**: This parameter sets the maximum length of the response. The total token limit for a single request with `gpt-3.5-turbo` is 4000 (approximately 6 pages of text), including the input. If your input consists of 3000 tokens, the response can only be 1000 tokens long. By default, this is set to 3000, meaning your maximum input can be 1000 tokens (roughly 1.5 pages of text).
+- **max_tokens**: This parameter sets the maximum length of the response. The total token limit for a single request with `gpt-3.5-turbo` is 4000 (approximately 6 pages of text), including the input. If your input consists of 3000 tokens, the response can only be 1000 tokens long. By default, this is set to 3000, meaning your maximum input can be 1000 tokens (roughly 1.5 pages of text). If you use `gpt-4`then I recommend `max_tokens=5000`.
 - **temperature**: [see official documentation](https://platform.openai.com/docs/api-reference/chat/create#chat/create-temperature)
 
 
 # 📍 Roadmap
 
-- [ ] add the functionality to abort a running call
-- [ ] make the max_tokens dynamicall, depending of the length of the input
+- [x] add the functionality to abort a running call
+- [ ] make the max_tokens dynamically, depending on the length of the input
 - [ ] improve prompts in the prompt library
-- [ ] use any selected text as input (even special charakters)
+- [ ] use any selected text as input (even special characters)
 - [ ] include feedback about used token / used money
 - [ ] parse errors and finish reason
 
