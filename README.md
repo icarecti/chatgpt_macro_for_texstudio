@@ -91,6 +91,7 @@ Within the Python script, you have the ability to modify various parameters to f
 
 # 📍 Roadmap
 
+- [x] add a prompt library
 - [x] add the functionality to abort a running call
 - [ ] make the max_tokens dynamically, depending on the length of the input
 - [ ] improve prompts in the prompt library
