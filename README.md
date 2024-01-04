@@ -62,8 +62,8 @@ Create an account at [openai.com](https://chat.openai.com/auth/login) and get yo
   -  Macros -> Edit Macros... -> Import
 - Edit both macro:
   - Macros -> Edit Macros... 
-  - Update the `script_path` variable with the absolute filepath of the Python script you noted in Step 1  - in Windows you have to use backslashes.
-  - Verify that the Python path is correct (type `which python3` in the terminal and paste the result into the macro) - in Windows you have to use forward slashes.
+  - Update the `script_path` variable with the absolute filepath of the Python script you noted in Step 1.
+  - Verify that the Python path is correct (type `which python3` in the terminal and paste the result into the macro).
 
 ### Step 3: Enjoy the ChatGPT Macro
 
