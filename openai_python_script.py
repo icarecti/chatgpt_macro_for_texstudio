@@ -1,6 +1,7 @@
 from openai import OpenAI
+import argparse
+import os
 import sys
-import base64
 
 client = OpenAI(
     ##################################################
@@ -9,17 +10,25 @@ client = OpenAI(
     ##################################################
 )
 
-if len(sys.argv) < 2:
-    print("Please provide a Base64-encoded prompt as a command-line argument.")
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    "--input-file",
+    required=True,
+    help="Path to a UTF-8 file containing the prompt.",
+)
+args = parser.parse_args()
+
+try:
+    with open(args.input_file, "r", encoding="utf-8") as input_file:
+        prompt = input_file.read()
+except Exception as e:
+    print(f"Error reading prompt file: {e}", file=sys.stderr)
     sys.exit(1)
 
-base64_input = sys.argv[1]
 try:
-    decoded_bytes = base64.b64decode(base64_input)
-    prompt = decoded_bytes.decode('utf-8')
-except Exception as e:
-    print(f"Error decoding Base64: {e}")
-    sys.exit(1)
+    os.remove(args.input_file)
+except OSError:
+    pass
 
 message_log = [
     {"role": "developer", "content": "You are a very intelligent autoregressive language model that has been fine-tuned with instruction-tuning and RLHF. You carefully provide accurate, factual, thoughtful, nuanced answers, and are brilliant at reasoning. If you think there might not be a correct answer, you say so. You are also an expert LaTeX editor. You only return valid LaTeX. Directly return the LaTeX text without an explanation as a prefix or suffix."}
