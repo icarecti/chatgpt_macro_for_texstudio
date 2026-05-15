@@ -1,5 +1,6 @@
 from openai import OpenAI
 import sys
+import base64
 
 client = OpenAI(
     ##################################################
@@ -9,10 +10,16 @@ client = OpenAI(
 )
 
 if len(sys.argv) < 2:
-    print("Please provide a prompt as a command-line argument.")
+    print("Please provide a Base64-encoded prompt as a command-line argument.")
     sys.exit(1)
 
-prompt = " ".join(sys.argv[1:])
+base64_input = sys.argv[1]
+try:
+    decoded_bytes = base64.b64decode(base64_input)
+    prompt = decoded_bytes.decode('utf-8')
+except Exception as e:
+    print(f"Error decoding Base64: {e}")
+    sys.exit(1)
 
 message_log = [
     {"role": "system", "content": "You are a very intelligent autoregressive language model that has been fine-tuned with instruction-tuning and RLHF. You carefully provide accurate, factual, thoughtful, nuanced answers, and are brilliant at reasoning. If you think there might not be a correct answer, you say so. You are a also an expert latex editor. You only return valid latex. Directly return the latex text without an explaination as  a pefix or suffix."}
