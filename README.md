@@ -90,19 +90,50 @@ Screenshot of the menu:
 
 Within the Python script, you have the ability to modify various parameters to fine-tune the generated response:
 
-- **developer message**: The developer message determines the behavior of the assistant. By default, ChatGPT uses *"You are a helpful assistant."* for this macro, it has been modified to *"You are a helpful assistant and an expert LaTeX editor. You only return valid LaTeX. Everything you return is directly inserted into a LaTeX document and interpreted as LaTeX code."*
+- **developer message**: The developer message determines the behavior of the assistant. The script uses OpenAI's Responses API, where these instructions are sent with the `developer` role. Older Chat Completions examples often used the `system` role; for current OpenAI Responses code, keep `developer`.
 - **model**: The model is set to `gpt-5.4-mini`.
 - **reasoning**: The reasoning effort is set to `medium`.
 - **max_output_tokens**: This parameter sets the maximum number of tokens generated for the response, including visible output and reasoning tokens. By default, this is set to 3000.
+
+### Use a different AI provider
+
+Some providers offer an OpenAI-compatible Python client setup, but their endpoint, role names, model names, and streaming format can differ. To adapt `openai_python_script.py`, change the client credentials and `base_url`, update the `model`, and use the provider's supported instruction role. For example, Chat Completions-style providers such as DeepSeek use `system`, `user`, `assistant`, and `tool` roles rather than OpenAI's `developer` role.
+
+If the provider does not support OpenAI's Responses API, replace `client.responses.create(...)` with `client.chat.completions.create(...)`, pass `messages=message_log` instead of `input=message_log`, and use provider-supported parameters such as `max_tokens` instead of `max_output_tokens`.
+
+Minimal Chat Completions-style shape:
+
+```python
+client = OpenAI(
+    api_key="... your provider api key ...",
+    base_url="https://provider.example/v1",
+)
+
+message_log = [
+    {"role": "system", "content": "You are an expert LaTeX editor. Only return valid LaTeX."}
+]
+message_log.append({"role": "user", "content": prompt})
+
+response = client.chat.completions.create(
+    model="provider-model-name",
+    messages=message_log,
+    max_tokens=3000,
+    stream=True,
+)
+
+for chunk in response:
+    delta = chunk.choices[0].delta.content
+    if delta:
+        print(delta, end="", flush=True)
+```
 
 
 # 📍 Roadmap
 
 - [x] add a prompt library
 - [x] add the functionality to abort a running call
+- [x] use any selected text as input (even special characters)
 - [ ] make `max_completion_tokens` dynamic, depending on the length of the input
-- [ ] improve prompts in the prompt library
-- [ ] use any selected text as input (even special characters)
 - [ ] include feedback about used token / used money
 - [ ] parse errors and finish reason
 
