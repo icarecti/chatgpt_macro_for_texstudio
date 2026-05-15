@@ -13,6 +13,12 @@ The first macro  `ChatGPT` allows you to send selected text from your document t
 The response text is  inserted directly into your editor, creating an intuitive and interactive ChatGPT experience.
 The secondary macro, `ChatGPT-PromptLibrary`, offers a collection of predefined prompts accessible through a dropdown menu, allowing you to easily apply them to any selected text.
 
+# 🛠️ May 2026: Modern AI Options
+
+This macro was developed in 2023 and is still working, but more AI solutions are now available for LaTeX and TeXstudio workflows.
+For built-in TeXstudio support, see the official [AI Chat Assistant documentation](https://texstudio-org.github.io/advanced.html#ai-chat-assistant).
+For a more agentic workflow, consider tools such as Claude Code or Codex CLI: AI agents that can be customized with plugins, skills, MCP servers, hooks, and similar extensions.
+
 # 🚀 Getting Started
 
 *Note: this macro was developed and tested on Ubuntu 22.04 but should also run on Windows and Mac.*
