@@ -17,8 +17,8 @@ The secondary macro, `ChatGPT-PromptLibrary`, offers a collection of predefined 
 
 This macro was developed in 2023 and is still working, but more AI solutions are now available for LaTeX and TeXstudio workflows.
 For built-in TeXstudio support, see the official [AI Chat Assistant documentation](https://texstudio-org.github.io/advanced.html#ai-chat-assistant).
-For an AI-first LaTeX editor and scientific workspace, [OpenAI Prism](https://openai.com/prism/) is another alternative.
 For a more agentic workflow, consider tools such as Claude Code or Codex CLI: AI agents that can be customized with plugins, skills, MCP servers, hooks, and similar extensions.
+For an AI-first LaTeX editor and scientific workspace, [OpenAI Prism](https://openai.com/prism/) is another alternative.
 
 # 🚀 Getting Started
 
