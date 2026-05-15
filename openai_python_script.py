@@ -27,12 +27,10 @@ message_log = [
 
 def send_message(message_log):
     return client.chat.completions.create(
-    #model="gpt-3.5-turbo",
-    #model="gpt-3.5-turbo-1106",
-    #model="gpt-4",
-    model="gpt-4-1106-preview",
+    model="gpt-5.4-mini",
+    reasoning_effort="medium",
     messages=message_log,
-    max_tokens=3000,
+    max_completion_tokens=3000,
     stop=None,
     temperature=0.7,
     stream=True)

@@ -84,8 +84,9 @@ Screenshot of the menu:
 Within the Python script, you have the ability to modify various parameters to fine-tune the generated response:
 
 - **system message**: The system message determines the behavior of the assistant. By default, ChatGPT uses *"You are a helpful assistant."* for this macro, it has been modified to *"You are a helpful assistant and an expert LaTeX editor. You only return valid LaTeX. Everything you return is directly inserted into a LaTeX document and interpreted as LaTeX code."*
-- **model**: The model is set to `gpt-3.5-turbo`. If you have access to GPT4 you can switch it to `gpt-4`.
-- **max_tokens**: This parameter sets the maximum length of the response. The total token limit for a single request with `gpt-3.5-turbo` is 4000 (approximately 6 pages of text), including the input. If your input consists of 3000 tokens, the response can only be 1000 tokens long. By default, this is set to 3000, meaning your maximum input can be 1000 tokens (roughly 1.5 pages of text). If you use `gpt-4`then I recommend `max_tokens=5000`.
+- **model**: The model is set to `gpt-5.4-mini`.
+- **reasoning_effort**: The reasoning effort is set to `medium`.
+- **max_completion_tokens**: This parameter sets the maximum number of tokens generated for the completion, including visible output and reasoning tokens. By default, this is set to 3000.
 - **temperature**: [see official documentation](https://platform.openai.com/docs/api-reference/chat/create#chat/create-temperature)
 
 
@@ -93,7 +94,7 @@ Within the Python script, you have the ability to modify various parameters to f
 
 - [x] add a prompt library
 - [x] add the functionality to abort a running call
-- [ ] make the max_tokens dynamically, depending on the length of the input
+- [ ] make `max_completion_tokens` dynamic, depending on the length of the input
 - [ ] improve prompts in the prompt library
 - [ ] use any selected text as input (even special characters)
 - [ ] include feedback about used token / used money
@@ -111,9 +112,6 @@ You have some ideas on how to improve the macros or tips on how to make them run
 
 **A:** If your TeXstudio version is older than `4.5.2rc1`, then empty spaces are removed by TeXstudio while reading the response. This issue was resolved with version `4.5.2rc1`.
 
-### ❓ Why is it so slow in generating text?
-
-**A:** When you create an account at OpenAI, you receive a free credit that expires after a few months. Using only this free credit results in slower response times. Adding a payment option to your OpenAI account significantly improves the response time, as demonstrated in the introduction video above.
 
 ### ❓ How can I add my own prompt to the prompt-library?
 
@@ -129,8 +127,10 @@ You have some ideas on how to improve the macros or tips on how to make them run
 
 **A:** The macro itself is completely free! However, OpenAI does charge a small fee for each request made to their API. The costs are quite minimal, so you can easily generate a large amount of content without breaking the bank.
 
-To give you an idea, the current pricing for the `gpt-3.5-turbo` model is $0.002 per 1,000 tokens. You can check the most up-to-date pricing information on the [OpenAI Pricing page](https://openai.com/pricing).
+As of May 15, 2026, the configured `gpt-5.4-mini` model costs $0.75 per 1M input tokens and $4.50 per 1M output tokens with standard API pricing. Assuming one page of text is about 700 tokens:
 
-**💡 Examples of Costs**
-- Generate the entire Harry Potter book series (7 books, 2,200 pages) for just $3.
-- Create 100 pages of text (including input) for a mere 10 cents.
+- Rewrite 1 page and receive about 1 page back: about $0.0037.
+- Rewrite 10 pages and receive about 10 pages back: about $0.037.
+- Generate 100 pages of output: about $0.315, plus the cost of your input and any reasoning tokens.
+
+These are rough reference values. Pricing changes over time, so check the official [OpenAI Pricing page](https://openai.com/pricing) for current pricing.
