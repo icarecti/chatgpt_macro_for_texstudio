@@ -90,11 +90,10 @@ Screenshot of the menu:
 
 Within the Python script, you have the ability to modify various parameters to fine-tune the generated response:
 
-- **system message**: The system message determines the behavior of the assistant. By default, ChatGPT uses *"You are a helpful assistant."* for this macro, it has been modified to *"You are a helpful assistant and an expert LaTeX editor. You only return valid LaTeX. Everything you return is directly inserted into a LaTeX document and interpreted as LaTeX code."*
+- **developer message**: The developer message determines the behavior of the assistant. By default, ChatGPT uses *"You are a helpful assistant."* for this macro, it has been modified to *"You are a helpful assistant and an expert LaTeX editor. You only return valid LaTeX. Everything you return is directly inserted into a LaTeX document and interpreted as LaTeX code."*
 - **model**: The model is set to `gpt-5.4-mini`.
-- **reasoning_effort**: The reasoning effort is set to `medium`.
-- **max_completion_tokens**: This parameter sets the maximum number of tokens generated for the completion, including visible output and reasoning tokens. By default, this is set to 3000.
-- **temperature**: [see official documentation](https://platform.openai.com/docs/api-reference/chat/create#chat/create-temperature)
+- **reasoning**: The reasoning effort is set to `medium`.
+- **max_output_tokens**: This parameter sets the maximum number of tokens generated for the response, including visible output and reasoning tokens. By default, this is set to 3000.
 
 
 # 📍 Roadmap

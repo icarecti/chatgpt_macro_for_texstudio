@@ -22,24 +22,25 @@ except Exception as e:
     sys.exit(1)
 
 message_log = [
-    {"role": "system", "content": "You are a very intelligent autoregressive language model that has been fine-tuned with instruction-tuning and RLHF. You carefully provide accurate, factual, thoughtful, nuanced answers, and are brilliant at reasoning. If you think there might not be a correct answer, you say so. You are a also an expert latex editor. You only return valid latex. Directly return the latex text without an explaination as  a pefix or suffix."}
+    {"role": "developer", "content": "You are a very intelligent autoregressive language model that has been fine-tuned with instruction-tuning and RLHF. You carefully provide accurate, factual, thoughtful, nuanced answers, and are brilliant at reasoning. If you think there might not be a correct answer, you say so. You are also an expert LaTeX editor. You only return valid LaTeX. Directly return the LaTeX text without an explanation as a prefix or suffix."}
 ]
 
 def send_message(message_log):
-    return client.chat.completions.create(
-    model="gpt-5.4-mini",
-    reasoning_effort="medium",
-    messages=message_log,
-    max_completion_tokens=3000,
-    stop=None,
-    temperature=0.7,
-    stream=True)
+    return client.responses.create(
+        model="gpt-5.4-mini",
+        reasoning={"effort": "medium"},
+        input=message_log,
+        max_output_tokens=3000,
+        stream=True,
+    )
 
 message_log.append({"role": "user", "content": prompt})
 response = send_message(message_log)
 
-for chunk in response:
-    content = chunk.choices[0].delta.content
-    if content is not None:    
-        print(content, end='', flush=True)
+for event in response:
+    if event.type == "response.output_text.delta":
+        print(event.delta, end='', flush=True)
+    elif event.type == "response.error":
+        print(f"\nError: {event.error}", file=sys.stderr)
+        sys.exit(1)
 print("\n")
